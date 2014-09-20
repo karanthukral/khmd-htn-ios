@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "SigninStartViewController.h"
 
 @interface ViewController () <CLLocationManagerDelegate>
 {
@@ -27,6 +28,12 @@
     locationManager.distanceFilter = 50.0; //Can be decided on later
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     [locationManager startUpdatingLocation];
+    
+    self.navigationController.navigationBar.hidden = YES;
+    
+    SigninStartViewController *signinStart = [self.storyboard instantiateViewControllerWithIdentifier:@"signinflowstart"];
+    UINavigationController *signinflow = [[UINavigationController alloc] initWithRootViewController:signinStart];
+    [self.navigationController presentViewController:signinflow animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
