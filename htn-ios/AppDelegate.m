@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WelcomeViewController.h"
+#import "htnMapViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     WelcomeViewController *welcomeController = [[WelcomeViewController alloc] init];
-    UINavigationController *startUpFlowNavigation = [[UINavigationController alloc] initWithRootViewController:welcomeController];
+    htnMapViewController *mapView = [[htnMapViewController alloc] init];
+    UINavigationController *startUpFlowNavigation = [[UINavigationController alloc] initWithRootViewController:mapView];
     self.window.rootViewController = startUpFlowNavigation;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

@@ -1,0 +1,64 @@
+//
+//  htnMapViewController.m
+//  htn-ios
+//
+//  Created by Karan Thukral on 2014-09-20.
+//  Copyright (c) 2014 Karan Thukral. All rights reserved.
+//
+
+#import "htnMapViewController.h"
+#import <MapKit/MapKit.h>
+#import "htmAnnotation.h"
+#import "htnMapAnnotationView.h"
+#import <CoreLocation/CoreLocation.h>
+
+@interface htnMapViewController () <MKMapViewDelegate>
+{
+    MKMapView *_mapView;
+}
+
+@end
+
+@implementation htnMapViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    _mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
+    _mapView.delegate = self;
+    [self.view addSubview:_mapView];
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(-45, -75);
+    htmAnnotation *annotation = [[htmAnnotation alloc] initWithTitle:@"New Test" andLocation:location];
+    [_mapView addAnnotation:annotation];
+    MKCoordinateRegion region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(50, 50));
+    [_mapView setRegion:region];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    htmAnnotation *myLoc = (htmAnnotation *)annotation;
+    htnMapAnnotationView *aView = (htnMapAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"annotationView"];
+    if (!aView) {
+        aView = myLoc.annotationView;
+    } else {
+        aView.annotation = annotation;
+    }
+    return aView;
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end
