@@ -10,4 +10,6 @@
 
 @interface HTNPostTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSMutableArray *posts;
+
 @end

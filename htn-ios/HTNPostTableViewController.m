@@ -10,10 +10,10 @@
 #import "htnPost.h"
 #import "HTNPostTableViewCell.h"
 #import "htnUser.h"
+#import "HTNPostList.h"
 
 @interface HTNPostTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *posts;
 @property (nonatomic, strong) IBOutlet UIView *headerView;
 
 @end
@@ -36,16 +36,7 @@
     
     self.tableView.separatorColor = [UIColor clearColor];
     
-    //hardcoded info, delete later
-    _posts = [[NSMutableArray alloc] init];
-    
-    htnUser *userOne = [[htnUser alloc] initWithid:@123 withName:@"hydersm"];
-    htnPost *postOne = [[htnPost alloc] initPostWithUserID:userOne withString:@"does this work?" withNumLikes:@4 withLat:[[NSDecimalNumber alloc] initWithDouble:100.0] withLong:[[NSDecimalNumber alloc] initWithDouble:100.0] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-180]];
-    [self.posts addObject:postOne];
-    
-    htnUser *userTwo = [[htnUser alloc] initWithid:@123 withName:@"duyeeee"];
-    htnPost *postTwo = [[htnPost alloc] initPostWithUserID:userTwo withString:@"best designer ever?" withNumLikes:@2 withLat:[[NSDecimalNumber alloc] initWithDouble:100.0] withLong:[[NSDecimalNumber alloc] initWithDouble:100.0] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-60]];
-    [self.posts addObject:postTwo];
+    _posts = [HTNPostList sharedInstance].postList;
     
     return self;
 }
@@ -98,6 +89,14 @@
     }
     
     return _headerView;
+}
+
+- (void)setPosts:(NSMutableArray *)posts
+{
+    _posts = posts;
+    if(self.tableView){
+        [self.tableView reloadData];
+    }
 }
 
 @end
