@@ -19,5 +19,6 @@
 @property (nonatomic, assign) NSDate *postDate;
 
 - (instancetype)initPostWithUserID:(NSNumber *)userID withString:(NSString *)string;
+- (instancetype)initPostWithUserID:(htnUser *)userID withString:(NSString *)string withNumLikes:(NSNumber*)numLikes withLat:(NSDecimalNumber *)latitude withLong:(NSDecimalNumber *)longitude;
 
 @end
