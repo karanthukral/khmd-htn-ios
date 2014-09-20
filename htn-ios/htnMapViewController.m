@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "htmAnnotation.h"
 #import <CoreLocation/CoreLocation.h>
+#import "HTNPostTableViewController.h"
 
 @interface htnMapViewController () <MKMapViewDelegate>
 {
@@ -22,15 +23,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(goToListView)];
+    [self setUpMapView];
+    [self addDummyAnnotation];
+}
+
+- (void)setUpMapView
+{
+    _mapView = [[MKMapView alloc] initWithFrame:CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + 64, self.view.bounds.size.width, self.view.bounds.size.height - 64)];
     _mapView.delegate = self;
     [self.view addSubview:_mapView];
+}
+
+#warning TEMP METHOD TILL ACTUAL DATA IS ACCESSIBLE
+- (void)addDummyAnnotation
+{
     CLLocationCoordinate2D location = CLLocationCoordinate2DMake(-45, -75);
     htmAnnotation *annotation = [[htmAnnotation alloc] initWithTitle:@"New Test" andLocation:location];
     [_mapView addAnnotation:annotation];
     MKCoordinateRegion region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(50, 50));
     [_mapView setRegion:region];
+}
+
+- (void)goToListView
+{
+    HTNPostTableViewController *listViewController = [[HTNPostTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:listViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

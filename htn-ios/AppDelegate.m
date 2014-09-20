@@ -20,15 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    WelcomeViewController *welcomeController = [[WelcomeViewController alloc] init];
-    HTNPostTableViewController *tableView = [[HTNPostTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
-    UINavigationController *startUpFlowNavigation = [[UINavigationController alloc] initWithRootViewController:tableView];
-    WelcomeViewController *welcomeController = [[WelcomeViewController alloc] init];
-//    htnMapViewController *mapView = [[htnMapViewController alloc] init];
-//    UINavigationController *startUpFlowNavigation = [[UINavigationController alloc] initWithRootViewController:mapView];
-    self.window.rootViewController = startUpFlowNavigation;
+    htnMapViewController *mapView = [[htnMapViewController alloc] init];
+    UINavigationController *mapViewNavController = [[UINavigationController alloc] initWithRootViewController:mapView];
     
+    self.window.rootViewController = mapViewNavController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
