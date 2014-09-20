@@ -6,17 +6,18 @@
 //  Copyright (c) 2014 Karan Thukral. All rights reserved.
 //
 
-#import "HTNPostTableView.h"
+#import "HTNPostTableViewController.h"
 #import "htnPost.h"
 #import "HTNPostTableViewCell.h"
 
-@interface HTNPostTableView ()
+@interface HTNPostTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *posts;
+@property (nonatomic, strong) IBOutlet UIView *headerView;
 
 @end
 
-@implementation HTNPostTableView
+@implementation HTNPostTableViewController
 
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
@@ -34,13 +35,21 @@
     
     self.tableView.separatorColor = [UIColor clearColor];
     
-    
     _posts = [[NSMutableArray alloc] init];
     
-    htnPost *postOne = [[htnPost alloc] initPostWithUserID:@123123 withString:@"Hello"];
-    [self.posts addObject:postOne];
+    htnPost *post = [[htnPost alloc] initPostWithUserID:@123 withString:@"Hyder"];
+    [self.posts addObject:post];
+    [self.posts addObject:post];
+    [self.posts addObject:post];
     
     return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.tableView.tableHeaderView = self.headerView;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -58,6 +67,8 @@
         tableViewCell = [tableView dequeueReusableCellWithIdentifier:@"HTNPostTableViewCell"];
     }
     
+    tableViewCell.post = self.posts[indexPath.row];
+    
     return tableViewCell;
 }
 
@@ -66,5 +77,13 @@
     return 97;
 }
 
+- (UIView *)headerView
+{
+    if(!_headerView){
+        [[NSBundle mainBundle] loadNibNamed:@"HTNTableHeaderView" owner:self options:nil];
+    }
+    
+    return _headerView;
+}
 
 @end

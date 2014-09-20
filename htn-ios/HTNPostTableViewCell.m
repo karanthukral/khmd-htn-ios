@@ -10,4 +10,15 @@
 
 @implementation HTNPostTableViewCell
 
+- (void)setPost:(htnPost *)post
+{
+    _post = post;
+    
+    [self.postTitleLabel setText:_post.postString];
+    [self.numLikesLabel setText:[_post.postNumLikes stringValue]];
+    
+    NSDate *now = [NSDate date];
+    NSTimeInterval diff = [now timeIntervalSinceDate:now];
+}
+
 @end

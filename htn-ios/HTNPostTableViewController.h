@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HTNPostTableView : UITableViewController
+@interface HTNPostTableViewController : UITableViewController
 
 @end
