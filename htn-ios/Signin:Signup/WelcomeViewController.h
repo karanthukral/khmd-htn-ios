@@ -1,5 +1,5 @@
 //
-//  SigninStartViewController.h
+//  WelcomeViewController.h
 //  htn-ios
 //
 //  Created by Karan Thukral on 2014-09-20.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SigninStartViewController : UIViewController
+@interface WelcomeViewController : UIViewController
 
 @end

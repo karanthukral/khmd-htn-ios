@@ -1,22 +1,29 @@
 //
-//  SigninStartViewController.m
+//  WelcomeViewController.m
 //  htn-ios
 //
 //  Created by Karan Thukral on 2014-09-20.
 //  Copyright (c) 2014 Karan Thukral. All rights reserved.
 //
 
-#import "SigninStartViewController.h"
+#import "WelcomeViewController.h"
+#import "WelcomeView.h"
 
-@interface SigninStartViewController ()
+@interface WelcomeViewController ()
+{
+    WelcomeView *_welcomeView;
+}
 
 @end
 
-@implementation SigninStartViewController
+@implementation WelcomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _welcomeView = [[WelcomeView alloc] initWithFrame:self.view.bounds];
+    _welcomeView.backgroundColor = [UIColor grayColor];
+    self.view = _welcomeView;
 }
 
 - (void)didReceiveMemoryWarning {
