@@ -10,4 +10,16 @@
 
 @implementation htnUser
 
+- (instancetype)initWithid:(NSNumber *)id withName:(NSString *)name
+{
+    self = [super init];
+    
+    if(self){
+        _userID = id;
+        _userName = name;
+    }
+    
+    return self;
+}
+
 @end
