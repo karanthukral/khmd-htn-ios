@@ -8,19 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
-#import "htnMapAnnotationView.h"
 
 @interface htmAnnotation : NSObject <MKAnnotation>
 {
-//        CLLocationCoordinate2D coordinate;
-//        NSString *title;
         NSString *subtitle;
 }
 
 @property (readonly, nonatomic) CLLocationCoordinate2D coordinate;
 @property (copy, nonatomic) NSString *title;
 
-- (htnMapAnnotationView *)annotationView;
+- (MKAnnotationView *)annotationView;
 - (instancetype)initWithTitle:(NSString *)newTitle andLocation:(CLLocationCoordinate2D)newCoordinate;
 
 @end

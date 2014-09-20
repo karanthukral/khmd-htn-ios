@@ -10,14 +10,14 @@
 
 @implementation htmAnnotation
 
-- (htnMapAnnotationView *)annotationView
+- (MKAnnotationView *)annotationView
 {
-    htnMapAnnotationView *annotationView = [[htnMapAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"annotationView"];
+    MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"annotationView"];
     annotationView.enabled = YES;
     annotationView.canShowCallout = YES;
-    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    annotationView.imageView.image = [UIImage imageNamed:@"pin.png"];
-    annotationView.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    annotationView.image = [UIImage imageNamed:@"pin.png"];
+    annotationView.contentMode = UIViewContentModeScaleAspectFit;
     return annotationView;
 }
 

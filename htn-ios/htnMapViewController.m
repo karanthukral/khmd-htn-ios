@@ -9,7 +9,6 @@
 #import "htnMapViewController.h"
 #import <MapKit/MapKit.h>
 #import "htmAnnotation.h"
-#import "htnMapAnnotationView.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface htnMapViewController () <MKMapViewDelegate>
@@ -42,7 +41,7 @@
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     htmAnnotation *myLoc = (htmAnnotation *)annotation;
-    htnMapAnnotationView *aView = (htnMapAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"annotationView"];
+    MKAnnotationView *aView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"annotationView"];
     if (!aView) {
         aView = myLoc.annotationView;
     } else {
@@ -50,6 +49,14 @@
     }
     return aView;
 }
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    NSLog(@"inside the stupid method");
+    
+    //Here, the annotation tapped can be accessed using view.annotation
+}
+
 
 /*
 #pragma mark - Navigation
