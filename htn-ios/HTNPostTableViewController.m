@@ -11,6 +11,7 @@
 #import "HTNPostTableViewCell.h"
 #import "htnUser.h"
 #import "HTNPostList.h"
+#import "HTNWritePostViewController.h"
 
 @interface HTNPostTableViewController ()
 
@@ -29,12 +30,14 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"woodBackground"]];
-    [backgroundView setFrame:self.tableView.frame];
+//    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"woodBackground"]];
+//    [backgroundView setFrame:self.tableView.frame];
+//    
+//    self.tableView.backgroundView = backgroundView;
     
-    self.tableView.backgroundView = backgroundView;
+    self.navigationItem.title = @"Bulletin";
     
-    self.tableView.separatorColor = [UIColor clearColor];
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.82 green:0.84 blue:0.85 alpha:1];
     
     _posts = [HTNPostList sharedInstance].postList;
     
@@ -45,7 +48,13 @@
 {
     [super viewDidLoad];
     
-    self.tableView.tableHeaderView = self.headerView;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(goToWritePostView)];
+}
+
+- (void)goToWritePostView
+{
+    HTNWritePostViewController *writeViewController = [[HTNWritePostViewController alloc] init];
+    [self.navigationController pushViewController:writeViewController animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
