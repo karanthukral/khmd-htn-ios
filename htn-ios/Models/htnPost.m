@@ -15,6 +15,7 @@
     if (self) {
         _userID = userID;
         _postString = string;
+        _postDate = [NSDate date];
     }
     return self;
 }

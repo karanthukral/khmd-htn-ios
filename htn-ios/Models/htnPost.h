@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSNumber *postNumLikes;
 @property (nonatomic, assign) NSDecimal postLat;
 @property (nonatomic, assign) NSDecimal postLong;
+@property (nonatomic, assign) NSDate *postDate;
 
 - (instancetype)initPostWithUserID:(NSNumber *)userID withString:(NSString *)string;
 
