@@ -11,12 +11,16 @@
 		3CA5A1D919CDDD7F0007A47B /* HTNTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA5A1D819CDDD7F0007A47B /* HTNTableHeaderView.xib */; };
 		3CE6A48219CDC68A0099944A /* HTNPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */; };
 		3CE6A48519CDCA2C0099944A /* HTNPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */; };
+		9E095B5119CE03BC00C5F5F2 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E095B5019CE03BC00C5F5F2 /* pin.png */; };
 		9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6419CD3BFB000E2582 /* htnPost.m */; };
 		9E76CB6819CD3EE5000E2582 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76CB6719CD3EE5000E2582 /* CoreLocation.framework */; };
 		9E76CB6B19CD43D9000E2582 /* htnUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6A19CD43D9000E2582 /* htnUser.m */; };
 		9E76CB7119CDB2BC000E2582 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7019CDB2BC000E2582 /* WelcomeViewController.m */; };
 		9E76CB7519CDB37A000E2582 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7419CDB37A000E2582 /* WelcomeView.m */; };
 		9E76CB7819CDBA51000E2582 /* htnHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7719CDBA51000E2582 /* htnHttpClient.m */; };
+		9E76CB7C19CDCB94000E2582 /* htnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7B19CDCB94000E2582 /* htnMapViewController.m */; };
+		9E76CB8219CDD99B000E2582 /* htmAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB8119CDD99B000E2582 /* htmAnnotation.m */; };
+		9E76CB8419CDD9BE000E2582 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76CB8319CDD9BE000E2582 /* MapKit.framework */; };
 		9EAA37A219CCF14300931ADD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A119CCF14300931ADD /* main.m */; };
 		9EAA37A519CCF14300931ADD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A419CCF14300931ADD /* AppDelegate.m */; };
 		9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA37AC19CCF14300931ADD /* Images.xcassets */; };
@@ -44,6 +48,7 @@
 		3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNPostTableViewCell.m; sourceTree = "<group>"; };
 		6B1779842BB2432F9AEBA849 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		929CF79FC3AE4B03B11C10EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E095B5019CE03BC00C5F5F2 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = Images/pin.png; sourceTree = "<group>"; };
 		9E76CB6319CD3BFB000E2582 /* htnPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = htnPost.h; path = Models/htnPost.h; sourceTree = "<group>"; };
 		9E76CB6419CD3BFB000E2582 /* htnPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = htnPost.m; path = Models/htnPost.m; sourceTree = "<group>"; };
 		9E76CB6719CD3EE5000E2582 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -55,6 +60,11 @@
 		9E76CB7419CDB37A000E2582 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = "Signin:Signup/WelcomeView.m"; sourceTree = "<group>"; };
 		9E76CB7619CDBA51000E2582 /* htnHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = htnHttpClient.h; path = "HTTP Client/htnHttpClient.h"; sourceTree = "<group>"; };
 		9E76CB7719CDBA51000E2582 /* htnHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = htnHttpClient.m; path = "HTTP Client/htnHttpClient.m"; sourceTree = "<group>"; };
+		9E76CB7A19CDCB94000E2582 /* htnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = htnMapViewController.h; sourceTree = "<group>"; };
+		9E76CB7B19CDCB94000E2582 /* htnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = htnMapViewController.m; sourceTree = "<group>"; };
+		9E76CB8019CDD99B000E2582 /* htmAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = htmAnnotation.h; sourceTree = "<group>"; };
+		9E76CB8119CDD99B000E2582 /* htmAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = htmAnnotation.m; sourceTree = "<group>"; };
+		9E76CB8319CDD9BE000E2582 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9EAA379C19CCF14300931ADD /* htn-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "htn-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAA37A019CCF14300931ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EAA37A119CCF14300931ADD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E76CB8419CDD9BE000E2582 /* MapKit.framework in Frameworks */,
 				9E76CB6819CD3EE5000E2582 /* CoreLocation.framework in Frameworks */,
 				D3740E05A76045859A958909 /* libPods.a in Frameworks */,
 			);
@@ -103,6 +114,7 @@
 		97745D5450A54E31B642284C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E76CB8319CDD9BE000E2582 /* MapKit.framework */,
 				9E76CB6719CD3EE5000E2582 /* CoreLocation.framework */,
 				929CF79FC3AE4B03B11C10EF /* libPods.a */,
 			);
@@ -172,6 +184,10 @@
 				9E76CB7219CDB2C1000E2582 /* SignIn/SignUp */,
 				9EAA379F19CCF14300931ADD /* Supporting Files */,
 				9E76CB7919CDBA55000E2582 /* HTTPClient */,
+				9E76CB7A19CDCB94000E2582 /* htnMapViewController.h */,
+				9E76CB7B19CDCB94000E2582 /* htnMapViewController.m */,
+				9E76CB8019CDD99B000E2582 /* htmAnnotation.h */,
+				9E76CB8119CDD99B000E2582 /* htmAnnotation.m */,
 			);
 			path = "htn-ios";
 			sourceTree = "<group>";
@@ -179,6 +195,7 @@
 		9EAA379F19CCF14300931ADD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9E095B5019CE03BC00C5F5F2 /* pin.png */,
 				9EAA37A019CCF14300931ADD /* Info.plist */,
 				9EAA37A119CCF14300931ADD /* main.m */,
 			);
@@ -284,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E095B5119CE03BC00C5F5F2 /* pin.png in Resources */,
 				9EAA37B019CCF14300931ADD /* LaunchScreen.xib in Resources */,
 				3CA5A1D919CDDD7F0007A47B /* HTNTableHeaderView.xib in Resources */,
 				3CE6A48219CDC68A0099944A /* HTNPostTableViewCell.xib in Resources */,
@@ -339,6 +357,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C04B3A619CDBCB2005FF166 /* HTNPostTableViewController.m in Sources */,
+				9E76CB8219CDD99B000E2582 /* htmAnnotation.m in Sources */,
+				9E76CB7C19CDCB94000E2582 /* htnMapViewController.m in Sources */,
 				9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */,
 				9E76CB7819CDBA51000E2582 /* htnHttpClient.m in Sources */,
 				9E76CB6B19CD43D9000E2582 /* htnUser.m in Sources */,
