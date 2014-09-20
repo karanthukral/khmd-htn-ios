@@ -11,6 +11,7 @@
 #import "HTNPostTableViewCell.h"
 #import "htnUser.h"
 #import "HTNPostList.h"
+#import "HTNWritePostViewController.h"
 
 @interface HTNPostTableViewController ()
 
@@ -45,7 +46,13 @@
 {
     [super viewDidLoad];
     
-    self.tableView.tableHeaderView = self.headerView;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(goToWritePostView)];
+}
+
+- (void)goToWritePostView
+{
+    HTNWritePostViewController *writeViewController = [[HTNWritePostViewController alloc] init];
+    [self.navigationController pushViewController:writeViewController animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
