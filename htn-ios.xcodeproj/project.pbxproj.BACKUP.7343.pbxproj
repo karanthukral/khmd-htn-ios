@@ -151,6 +151,8 @@
 				9E76CB6619CD3C00000E2582 /* Models */,
 				9EAA37A319CCF14300931ADD /* AppDelegate.h */,
 				9EAA37A419CCF14300931ADD /* AppDelegate.m */,
+<<<<<<< Updated upstream
+=======
 				9EAA37A619CCF14300931ADD /* ViewController.h */,
 				9EAA37A719CCF14300931ADD /* ViewController.m */,
 				3C04B3A419CDBCB2005FF166 /* HTNPostTableView.h */,
@@ -158,6 +160,7 @@
 				3CE6A48319CDCA2C0099944A /* HTNPostTableViewCell.h */,
 				3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */,
 				3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */,
+>>>>>>> Stashed changes
 				9EAA37AC19CCF14300931ADD /* Images.xcassets */,
 				9EAA37AE19CCF14300931ADD /* LaunchScreen.xib */,
 				9E76CB7219CDB2C1000E2582 /* SignIn/SignUp */,
