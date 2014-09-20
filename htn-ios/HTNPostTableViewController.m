@@ -39,11 +39,13 @@
     //hardcoded info, delete later
     _posts = [[NSMutableArray alloc] init];
     
-    htnUser *user = [[htnUser alloc] initWithid:@123 withName:@"hydersm"];
-    htnPost *post = [[htnPost alloc] initPostWithUserID:user withString:@"does this work?" withNumLikes:@4 withLat:[[NSDecimalNumber alloc] initWithDouble:100.0] withLong:[[NSDecimalNumber alloc] initWithDouble:100.0] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-180]];
-    [self.posts addObject:post];
-    [self.posts addObject:post];
-    [self.posts addObject:post];
+    htnUser *userOne = [[htnUser alloc] initWithid:@123 withName:@"hydersm"];
+    htnPost *postOne = [[htnPost alloc] initPostWithUserID:userOne withString:@"does this work?" withNumLikes:@4 withLat:[[NSDecimalNumber alloc] initWithDouble:100.0] withLong:[[NSDecimalNumber alloc] initWithDouble:100.0] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-180]];
+    [self.posts addObject:postOne];
+    
+    htnUser *userTwo = [[htnUser alloc] initWithid:@123 withName:@"duyeeee"];
+    htnPost *postTwo = [[htnPost alloc] initPostWithUserID:userTwo withString:@"best designer ever?" withNumLikes:@2 withLat:[[NSDecimalNumber alloc] initWithDouble:100.0] withLong:[[NSDecimalNumber alloc] initWithDouble:100.0] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-60]];
+    [self.posts addObject:postTwo];
     
     return self;
 }
@@ -57,7 +59,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"%lu", (unsigned long)[self.posts count]);
     return [self.posts count];
 }
 
@@ -73,7 +74,16 @@
     tableViewCell.post = self.posts[indexPath.row];
     [tableViewCell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
+    UITapGestureRecognizer *singleFingerTap =
+    [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    [tableViewCell.upvoteButton addGestureRecognizer:singleFingerTap];
+    
     return tableViewCell;
+}
+
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer {
+    [((HTNPostTableViewCell *)recognizer.view.superview.superview) upvote];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

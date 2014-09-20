@@ -17,7 +17,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numLikesLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *upvoteImage;
 
 @property (weak, nonatomic) htnPost *post;
+@property (nonatomic) BOOL upvoteClicked;
+
+- (void)upvote;
 
 @end
