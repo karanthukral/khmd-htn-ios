@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSNumber *userID;
 @property (strong, nonatomic) NSString *userName;
 
+- (instancetype)initWithid:(NSNumber *)id withName:(NSString *)name;
+
 @end
