@@ -10,11 +10,11 @@
 		9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6419CD3BFB000E2582 /* htnPost.m */; };
 		9E76CB6819CD3EE5000E2582 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76CB6719CD3EE5000E2582 /* CoreLocation.framework */; };
 		9E76CB6B19CD43D9000E2582 /* htnUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6A19CD43D9000E2582 /* htnUser.m */; };
-		9E76CB6E19CD4DB6000E2582 /* SigninStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6D19CD4DB6000E2582 /* SigninStartViewController.m */; };
+		9E76CB7119CDB2BC000E2582 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7019CDB2BC000E2582 /* WelcomeViewController.m */; };
+		9E76CB7519CDB37A000E2582 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7419CDB37A000E2582 /* WelcomeView.m */; };
 		9EAA37A219CCF14300931ADD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A119CCF14300931ADD /* main.m */; };
 		9EAA37A519CCF14300931ADD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A419CCF14300931ADD /* AppDelegate.m */; };
 		9EAA37A819CCF14300931ADD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A719CCF14300931ADD /* ViewController.m */; };
-		9EAA37AB19CCF14300931ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA37A919CCF14300931ADD /* Main.storyboard */; };
 		9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA37AC19CCF14300931ADD /* Images.xcassets */; };
 		9EAA37B019CCF14300931ADD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA37AE19CCF14300931ADD /* LaunchScreen.xib */; };
 		9EAA37BC19CCF14300931ADD /* htn_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37BB19CCF14300931ADD /* htn_iosTests.m */; };
@@ -39,8 +39,10 @@
 		9E76CB6719CD3EE5000E2582 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9E76CB6919CD43D9000E2582 /* htnUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = htnUser.h; path = Models/htnUser.h; sourceTree = "<group>"; };
 		9E76CB6A19CD43D9000E2582 /* htnUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = htnUser.m; path = Models/htnUser.m; sourceTree = "<group>"; };
-		9E76CB6C19CD4DB6000E2582 /* SigninStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninStartViewController.h; sourceTree = "<group>"; };
-		9E76CB6D19CD4DB6000E2582 /* SigninStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninStartViewController.m; sourceTree = "<group>"; };
+		9E76CB6F19CDB2BC000E2582 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = "Signin:Signup/WelcomeViewController.h"; sourceTree = "<group>"; };
+		9E76CB7019CDB2BC000E2582 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = "Signin:Signup/WelcomeViewController.m"; sourceTree = "<group>"; };
+		9E76CB7319CDB37A000E2582 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = "Signin:Signup/WelcomeView.h"; sourceTree = "<group>"; };
+		9E76CB7419CDB37A000E2582 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = "Signin:Signup/WelcomeView.m"; sourceTree = "<group>"; };
 		9EAA379C19CCF14300931ADD /* htn-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "htn-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAA37A019CCF14300931ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EAA37A119CCF14300931ADD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,7 +50,6 @@
 		9EAA37A419CCF14300931ADD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9EAA37A619CCF14300931ADD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9EAA37A719CCF14300931ADD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9EAA37AA19CCF14300931ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EAA37AC19CCF14300931ADD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9EAA37AF19CCF14300931ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9EAA37B519CCF14300931ADD /* htn-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "htn-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +97,17 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		9E76CB7219CDB2C1000E2582 /* SignIn/SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9E76CB6F19CDB2BC000E2582 /* WelcomeViewController.h */,
+				9E76CB7019CDB2BC000E2582 /* WelcomeViewController.m */,
+				9E76CB7319CDB37A000E2582 /* WelcomeView.h */,
+				9E76CB7419CDB37A000E2582 /* WelcomeView.m */,
+			);
+			name = SignIn/SignUp;
+			sourceTree = "<group>";
+		};
 		9EAA379319CCF14300931ADD = {
 			isa = PBXGroup;
 			children = (
@@ -124,12 +136,10 @@
 				9EAA37A419CCF14300931ADD /* AppDelegate.m */,
 				9EAA37A619CCF14300931ADD /* ViewController.h */,
 				9EAA37A719CCF14300931ADD /* ViewController.m */,
-				9EAA37A919CCF14300931ADD /* Main.storyboard */,
 				9EAA37AC19CCF14300931ADD /* Images.xcassets */,
 				9EAA37AE19CCF14300931ADD /* LaunchScreen.xib */,
+				9E76CB7219CDB2C1000E2582 /* SignIn/SignUp */,
 				9EAA379F19CCF14300931ADD /* Supporting Files */,
-				9E76CB6C19CD4DB6000E2582 /* SigninStartViewController.h */,
-				9E76CB6D19CD4DB6000E2582 /* SigninStartViewController.m */,
 			);
 			path = "htn-ios";
 			sourceTree = "<group>";
@@ -242,7 +252,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EAA37AB19CCF14300931ADD /* Main.storyboard in Resources */,
 				9EAA37B019CCF14300931ADD /* LaunchScreen.xib in Resources */,
 				9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */,
 			);
@@ -296,10 +305,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */,
-				9E76CB6E19CD4DB6000E2582 /* SigninStartViewController.m in Sources */,
 				9EAA37A819CCF14300931ADD /* ViewController.m in Sources */,
 				9E76CB6B19CD43D9000E2582 /* htnUser.m in Sources */,
 				9EAA37A519CCF14300931ADD /* AppDelegate.m in Sources */,
+				9E76CB7519CDB37A000E2582 /* WelcomeView.m in Sources */,
+				9E76CB7119CDB2BC000E2582 /* WelcomeViewController.m in Sources */,
 				9EAA37A219CCF14300931ADD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9EAA37A919CCF14300931ADD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9EAA37AA19CCF14300931ADD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9EAA37AE19CCF14300931ADD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
