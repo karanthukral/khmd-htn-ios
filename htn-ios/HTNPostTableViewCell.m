@@ -17,8 +17,11 @@
     [self.postTitleLabel setText:_post.postString];
     [self.numLikesLabel setText:[_post.postNumLikes stringValue]];
     
-    NSDate *now = [NSDate date];
-    NSTimeInterval diff = [now timeIntervalSinceDate:now];
+    NSTimeInterval diff = [_post.postDate timeIntervalSinceNow];
+    NSLog(@"%f", diff);
+    int hoursOld = -(NSInteger)diff/60;
+    [self.timeLabel setText:[NSString stringWithFormat:@"%dhrs", hoursOld]];
+    [self.userNameLabel setText:_post.userID.userName];
 }
 
 @end

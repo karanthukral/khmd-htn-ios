@@ -16,6 +16,11 @@
 
 - (instancetype)initPostWithUserID:(htnUser *)userID withString:(NSString *)string withNumLikes:(NSNumber*)numLikes withLat:(NSDecimalNumber *)latitude withLong:(NSDecimalNumber *)longitude
 {
+    return [self initPostWithUserID:userID withString:string withNumLikes:numLikes withLat:latitude withLong:longitude withDate:[NSDate date]];
+}
+
+- (instancetype)initPostWithUserID:(htnUser *)userID withString:(NSString *)string withNumLikes:(NSNumber*)numLikes withLat:(NSDecimalNumber *)latitude withLong:(NSDecimalNumber *)longitude withDate:(NSDate *)date
+{
     self = [super init];
     if (self) {
         _userID = userID;
@@ -23,7 +28,7 @@
         _postNumLikes = numLikes;
         _postLat = latitude;
         _postLong = longitude;
-        _postDate = [NSDate date];
+        _postDate = date;
     }
     return self;
 }

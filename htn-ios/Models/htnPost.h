@@ -14,11 +14,12 @@
 @property (nonatomic, strong) htnUser *userID;
 @property (nonatomic, strong) NSString *postString;
 @property (nonatomic, strong) NSNumber *postNumLikes;
-@property (nonatomic, assign) NSDecimalNumber *postLat;
-@property (nonatomic, assign) NSDecimalNumber *postLong;
-@property (nonatomic, assign) NSDate *postDate;
+@property (nonatomic, strong) NSDecimalNumber *postLat;
+@property (nonatomic, strong) NSDecimalNumber *postLong;
+@property (nonatomic, strong) NSDate *postDate;
 
 - (instancetype)initPostWithUserID:(NSNumber *)userID withString:(NSString *)string;
 - (instancetype)initPostWithUserID:(htnUser *)userID withString:(NSString *)string withNumLikes:(NSNumber*)numLikes withLat:(NSDecimalNumber *)latitude withLong:(NSDecimalNumber *)longitude;
+- (instancetype)initPostWithUserID:(htnUser *)userID withString:(NSString *)string withNumLikes:(NSNumber*)numLikes withLat:(NSDecimalNumber *)latitude withLong:(NSDecimalNumber *)longitude withDate:(NSDate *)date;
 
 @end

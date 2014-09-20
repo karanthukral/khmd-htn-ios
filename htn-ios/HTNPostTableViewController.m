@@ -9,6 +9,7 @@
 #import "HTNPostTableViewController.h"
 #import "htnPost.h"
 #import "HTNPostTableViewCell.h"
+#import "htnUser.h"
 
 @interface HTNPostTableViewController ()
 
@@ -35,9 +36,11 @@
     
     self.tableView.separatorColor = [UIColor clearColor];
     
+    //hardcoded info, delete later
     _posts = [[NSMutableArray alloc] init];
     
-    htnPost *post = [[htnPost alloc] initPostWithUserID:@123 withString:@"Hyder"];
+    htnUser *user = [[htnUser alloc] initWithid:@123 withName:@"hydersm"];
+    htnPost *post = [[htnPost alloc] initPostWithUserID:user withString:@"does this work?" withNumLikes:@4 withLat:[[NSDecimalNumber alloc] initWithDouble:100.0] withLong:[[NSDecimalNumber alloc] initWithDouble:100.0] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-180]];
     [self.posts addObject:post];
     [self.posts addObject:post];
     [self.posts addObject:post];
@@ -68,6 +71,7 @@
     }
     
     tableViewCell.post = self.posts[indexPath.row];
+    [tableViewCell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return tableViewCell;
 }
