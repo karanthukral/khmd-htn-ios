@@ -45,11 +45,11 @@
 - (void)generateDummyData
 {
     htnUser *userOne = [[htnUser alloc] initWithid:@123 withName:@"hydersm"];
-    htnPost *postOne = [[htnPost alloc] initPostWithUserID:userOne withString:@"does this work?"withNumLikes:@4 withLat:[[NSDecimalNumber alloc] initWithDouble:100.0] withLong:[[NSDecimalNumber alloc] initWithDouble:100.0] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-180]];
+    htnPost *postOne = [[htnPost alloc] initPostWithUserID:userOne withString:@"does this work?"withNumLikes:@4 withLat:[[NSDecimalNumber alloc] initWithDouble:45] withLong:[[NSDecimalNumber alloc] initWithDouble:-75] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-180]];
     [self addPost:postOne];
     
     htnUser *userTwo = [[htnUser alloc] initWithid:@123 withName:@"duyeeee"];
-    htnPost *postTwo = [[htnPost alloc] initPostWithUserID:userTwo withString:@"best designer ever?" withNumLikes:@2 withLat:[[NSDecimalNumber alloc] initWithDouble:100.0] withLong:[[NSDecimalNumber alloc] initWithDouble:100.0] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-60]];
+    htnPost *postTwo = [[htnPost alloc] initPostWithUserID:userTwo withString:@"best designer ever?" withNumLikes:@30 withLat:[[NSDecimalNumber alloc] initWithDouble:45.000001] withLong:[[NSDecimalNumber alloc] initWithDouble:-75.000001] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-60]];
     [self.postList addObject:postTwo];
 }
 
@@ -62,7 +62,7 @@
 - (void)updateViewControllers
 {
     self.tableViewController.posts = self.postList;
-    
+
     //map update code here
 }
 

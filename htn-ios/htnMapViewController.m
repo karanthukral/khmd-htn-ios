@@ -8,13 +8,17 @@
 
 #import "htnMapViewController.h"
 #import <MapKit/MapKit.h>
-#import "htmAnnotation.h"
+#import "htnAnnotation.h"
 #import <CoreLocation/CoreLocation.h>
 #import "HTNPostTableViewController.h"
+#import "htnPost.h"
+#import "HTNPostList.h"
 
 @interface htnMapViewController () <MKMapViewDelegate>
 {
     MKMapView *_mapView;
+    MKCoordinateRegion region;
+    int numberZoomedOut;
 }
 
 @end
@@ -23,8 +27,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(goToListView)];
+    
+    _posts = [HTNPostList sharedInstance].postList;
+    
+    numberZoomedOut = 0;
+    UIBarButtonItem *zoomIn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"pin48.png"] style:UIBarButtonItemStylePlain target:self action:@selector(zoomIn)];
+    UIBarButtonItem *zoomOut = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"pin48.png"] style:UIBarButtonItemStylePlain target:self action:@selector(zoomOut)];
+    self.navigationItem.rightBarButtonItems = @[zoomIn, zoomOut];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(goToListView)];
     [self setUpMapView];
+    _mapView.scrollEnabled = NO;
+    _mapView.zoomEnabled = NO;
     [self addDummyAnnotation];
 }
 
@@ -38,10 +52,13 @@
 #warning TEMP METHOD TILL ACTUAL DATA IS ACCESSIBLE
 - (void)addDummyAnnotation
 {
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(-45, -75);
-    htmAnnotation *annotation = [[htmAnnotation alloc] initWithTitle:@"New Test" andLocation:location];
-    [_mapView addAnnotation:annotation];
-    MKCoordinateRegion region = MKCoordinateRegionMake(location, MKCoordinateSpanMake(50, 50));
+    for (htnPost *post in _posts) {
+        CLLocationCoordinate2D location = CLLocationCoordinate2DMake([post.postLat doubleValue], [post.postLong doubleValue]);
+        htnAnnotation *annotation = [[htnAnnotation alloc] initWithTitle:post.postString andLocation:location forPostWithLikes:post.postNumLikes];
+        [_mapView addAnnotation:annotation];
+    }
+    
+    region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(45, -75), 5000, 5000);
     [_mapView setRegion:region];
 }
 
@@ -51,6 +68,24 @@
     [self.navigationController pushViewController:listViewController animated:YES];
 }
 
+- (void)zoomIn
+{
+    if (numberZoomedOut > 0) {
+        region.span = MKCoordinateSpanMake(region.span.latitudeDelta - 0.09, region.span.longitudeDelta - 0.09);
+        [_mapView setRegion:region];
+        numberZoomedOut--;
+    }
+}
+
+- (void)zoomOut
+{
+    if (numberZoomedOut < 8) {
+        region.span = MKCoordinateSpanMake(region.span.latitudeDelta + 0.09, region.span.longitudeDelta + 0.09);
+        [_mapView setRegion:region];
+        numberZoomedOut++;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -58,7 +93,7 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    htmAnnotation *myLoc = (htmAnnotation *)annotation;
+    htnAnnotation *myLoc = (htnAnnotation *)annotation;
     MKAnnotationView *aView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"annotationView"];
     if (!aView) {
         aView = myLoc.annotationView;

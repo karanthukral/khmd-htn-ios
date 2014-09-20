@@ -10,4 +10,6 @@
 
 @interface htnMapViewController : UIViewController
 
+@property (strong, nonatomic) NSArray *posts;
+
 @end

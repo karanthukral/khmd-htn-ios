@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "htnPost.h"
 
-@interface htmAnnotation : NSObject <MKAnnotation>
+@interface htnAnnotation : NSObject <MKAnnotation>
 {
         NSString *subtitle;
 }
@@ -18,6 +19,6 @@
 @property (copy, nonatomic) NSString *title;
 
 - (MKAnnotationView *)annotationView;
-- (instancetype)initWithTitle:(NSString *)newTitle andLocation:(CLLocationCoordinate2D)newCoordinate;
+- (instancetype)initWithTitle:(NSString *)newTitle andLocation:(CLLocationCoordinate2D)newCoordinate forPostWithLikes:(NSNumber *)numPostLikes;
 
 @end
