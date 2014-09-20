@@ -10,14 +10,23 @@
 
 @implementation htnPost
 
-- (instancetype)initPostWithUserID:(NSNumber *)userID withString:(NSString *)string {
+- (instancetype)initPostWithUserID:(htnUser *)userID withString:(NSString *)string {
+    return [self initPostWithUserID:userID withString:string withNumLikes:@0 withLat:[[NSDecimalNumber alloc] initWithDouble:0.0] withLong:[[NSDecimalNumber alloc] initWithDouble:0.0]];
+}
+
+- (instancetype)initPostWithUserID:(htnUser *)userID withString:(NSString *)string withNumLikes:(NSNumber*)numLikes withLat:(NSDecimalNumber *)latitude withLong:(NSDecimalNumber *)longitude
+{
     self = [super init];
     if (self) {
         _userID = userID;
         _postString = string;
+        _postNumLikes = numLikes;
+        _postLat = latitude;
+        _postLong = longitude;
         _postDate = [NSDate date];
     }
     return self;
 }
 
 @end
+

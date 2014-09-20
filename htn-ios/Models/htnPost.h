@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "htnUser.h"
 
 @interface htnPost : NSObject
 
-@property (nonatomic, strong) NSNumber *userID;
+@property (nonatomic, strong) htnUser *userID;
 @property (nonatomic, strong) NSString *postString;
 @property (nonatomic, strong) NSNumber *postNumLikes;
-@property (nonatomic, assign) NSDecimal postLat;
-@property (nonatomic, assign) NSDecimal postLong;
+@property (nonatomic, assign) NSDecimalNumber *postLat;
+@property (nonatomic, assign) NSDecimalNumber *postLong;
 @property (nonatomic, assign) NSDate *postDate;
 
 - (instancetype)initPostWithUserID:(NSNumber *)userID withString:(NSString *)string;
