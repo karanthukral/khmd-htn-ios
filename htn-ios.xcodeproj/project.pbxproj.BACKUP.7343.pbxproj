@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C04B3A619CDBCB2005FF166 /* HTNPostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C04B3A519CDBCB2005FF166 /* HTNPostTableViewController.m */; };
-		3CA5A1D919CDDD7F0007A47B /* HTNTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA5A1D819CDDD7F0007A47B /* HTNTableHeaderView.xib */; };
+		3C04B3A619CDBCB2005FF166 /* HTNPostTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C04B3A519CDBCB2005FF166 /* HTNPostTableView.m */; };
 		3CE6A48219CDC68A0099944A /* HTNPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */; };
 		3CE6A48519CDCA2C0099944A /* HTNPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */; };
 		9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6419CD3BFB000E2582 /* htnPost.m */; };
@@ -36,9 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C04B3A419CDBCB2005FF166 /* HTNPostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNPostTableViewController.h; sourceTree = "<group>"; };
-		3C04B3A519CDBCB2005FF166 /* HTNPostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNPostTableViewController.m; sourceTree = "<group>"; };
-		3CA5A1D819CDDD7F0007A47B /* HTNTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTNTableHeaderView.xib; sourceTree = "<group>"; };
+		3C04B3A419CDBCB2005FF166 /* HTNPostTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNPostTableView.h; sourceTree = "<group>"; };
+		3C04B3A519CDBCB2005FF166 /* HTNPostTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNPostTableView.m; sourceTree = "<group>"; };
 		3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTNPostTableViewCell.xib; sourceTree = "<group>"; };
 		3CE6A48319CDCA2C0099944A /* HTNPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNPostTableViewCell.h; sourceTree = "<group>"; };
 		3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNPostTableViewCell.m; sourceTree = "<group>"; };
@@ -87,19 +85,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3CA5A1DA19CDE72E0007A47B /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				3C04B3A419CDBCB2005FF166 /* HTNPostTableViewController.h */,
-				3C04B3A519CDBCB2005FF166 /* HTNPostTableViewController.m */,
-				3CE6A48319CDCA2C0099944A /* HTNPostTableViewCell.h */,
-				3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */,
-				3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */,
-				3CA5A1D819CDDD7F0007A47B /* HTNTableHeaderView.xib */,
-			);
-			name = TableView;
-			sourceTree = "<group>";
-		};
 		97745D5450A54E31B642284C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +151,16 @@
 				9E76CB6619CD3C00000E2582 /* Models */,
 				9EAA37A319CCF14300931ADD /* AppDelegate.h */,
 				9EAA37A419CCF14300931ADD /* AppDelegate.m */,
-				3CA5A1DA19CDE72E0007A47B /* TableView */,
+<<<<<<< Updated upstream
+=======
+				9EAA37A619CCF14300931ADD /* ViewController.h */,
+				9EAA37A719CCF14300931ADD /* ViewController.m */,
+				3C04B3A419CDBCB2005FF166 /* HTNPostTableView.h */,
+				3C04B3A519CDBCB2005FF166 /* HTNPostTableView.m */,
+				3CE6A48319CDCA2C0099944A /* HTNPostTableViewCell.h */,
+				3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */,
+				3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */,
+>>>>>>> Stashed changes
 				9EAA37AC19CCF14300931ADD /* Images.xcassets */,
 				9EAA37AE19CCF14300931ADD /* LaunchScreen.xib */,
 				9E76CB7219CDB2C1000E2582 /* SignIn/SignUp */,
@@ -285,7 +279,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EAA37B019CCF14300931ADD /* LaunchScreen.xib in Resources */,
-				3CA5A1D919CDDD7F0007A47B /* HTNTableHeaderView.xib in Resources */,
 				3CE6A48219CDC68A0099944A /* HTNPostTableViewCell.xib in Resources */,
 				9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */,
 			);
@@ -338,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C04B3A619CDBCB2005FF166 /* HTNPostTableViewController.m in Sources */,
+				3C04B3A619CDBCB2005FF166 /* HTNPostTableView.m in Sources */,
 				9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */,
 				9E76CB7819CDBA51000E2582 /* htnHttpClient.m in Sources */,
 				9E76CB6B19CD43D9000E2582 /* htnUser.m in Sources */,

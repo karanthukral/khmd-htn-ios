@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WelcomeViewController.h"
+#import "HTNPostTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    WelcomeViewController *welcomeController = [[WelcomeViewController alloc] init];
-    UINavigationController *startUpFlowNavigation = [[UINavigationController alloc] initWithRootViewController:welcomeController];
+//    WelcomeViewController *welcomeController = [[WelcomeViewController alloc] init];
+    HTNPostTableViewController *tableView = [[HTNPostTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController *startUpFlowNavigation = [[UINavigationController alloc] initWithRootViewController:tableView];
     self.window.rootViewController = startUpFlowNavigation;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

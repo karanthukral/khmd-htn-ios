@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C04B3A619CDBCB2005FF166 /* HTNPostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C04B3A519CDBCB2005FF166 /* HTNPostTableViewController.m */; };
-		3CA5A1D919CDDD7F0007A47B /* HTNTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA5A1D819CDDD7F0007A47B /* HTNTableHeaderView.xib */; };
+		3C04B3A619CDBCB2005FF166 /* HTNPostTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C04B3A519CDBCB2005FF166 /* HTNPostTableView.m */; };
 		3CE6A48219CDC68A0099944A /* HTNPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */; };
 		3CE6A48519CDCA2C0099944A /* HTNPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */; };
 		9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6419CD3BFB000E2582 /* htnPost.m */; };
@@ -16,9 +15,9 @@
 		9E76CB6B19CD43D9000E2582 /* htnUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6A19CD43D9000E2582 /* htnUser.m */; };
 		9E76CB7119CDB2BC000E2582 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7019CDB2BC000E2582 /* WelcomeViewController.m */; };
 		9E76CB7519CDB37A000E2582 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7419CDB37A000E2582 /* WelcomeView.m */; };
-		9E76CB7819CDBA51000E2582 /* htnHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7719CDBA51000E2582 /* htnHttpClient.m */; };
 		9EAA37A219CCF14300931ADD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A119CCF14300931ADD /* main.m */; };
 		9EAA37A519CCF14300931ADD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A419CCF14300931ADD /* AppDelegate.m */; };
+		9EAA37A819CCF14300931ADD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A719CCF14300931ADD /* ViewController.m */; };
 		9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA37AC19CCF14300931ADD /* Images.xcassets */; };
 		9EAA37B019CCF14300931ADD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA37AE19CCF14300931ADD /* LaunchScreen.xib */; };
 		9EAA37BC19CCF14300931ADD /* htn_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37BB19CCF14300931ADD /* htn_iosTests.m */; };
@@ -36,9 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C04B3A419CDBCB2005FF166 /* HTNPostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNPostTableViewController.h; sourceTree = "<group>"; };
-		3C04B3A519CDBCB2005FF166 /* HTNPostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNPostTableViewController.m; sourceTree = "<group>"; };
-		3CA5A1D819CDDD7F0007A47B /* HTNTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTNTableHeaderView.xib; sourceTree = "<group>"; };
+		3C04B3A419CDBCB2005FF166 /* HTNPostTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNPostTableView.h; sourceTree = "<group>"; };
+		3C04B3A519CDBCB2005FF166 /* HTNPostTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNPostTableView.m; sourceTree = "<group>"; };
 		3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HTNPostTableViewCell.xib; sourceTree = "<group>"; };
 		3CE6A48319CDCA2C0099944A /* HTNPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTNPostTableViewCell.h; sourceTree = "<group>"; };
 		3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTNPostTableViewCell.m; sourceTree = "<group>"; };
@@ -53,13 +51,13 @@
 		9E76CB7019CDB2BC000E2582 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = "Signin:Signup/WelcomeViewController.m"; sourceTree = "<group>"; };
 		9E76CB7319CDB37A000E2582 /* WelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeView.h; path = "Signin:Signup/WelcomeView.h"; sourceTree = "<group>"; };
 		9E76CB7419CDB37A000E2582 /* WelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeView.m; path = "Signin:Signup/WelcomeView.m"; sourceTree = "<group>"; };
-		9E76CB7619CDBA51000E2582 /* htnHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = htnHttpClient.h; path = "HTTP Client/htnHttpClient.h"; sourceTree = "<group>"; };
-		9E76CB7719CDBA51000E2582 /* htnHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = htnHttpClient.m; path = "HTTP Client/htnHttpClient.m"; sourceTree = "<group>"; };
 		9EAA379C19CCF14300931ADD /* htn-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "htn-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAA37A019CCF14300931ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EAA37A119CCF14300931ADD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EAA37A319CCF14300931ADD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9EAA37A419CCF14300931ADD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9EAA37A619CCF14300931ADD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9EAA37A719CCF14300931ADD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9EAA37AC19CCF14300931ADD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9EAA37AF19CCF14300931ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9EAA37B519CCF14300931ADD /* htn-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "htn-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,19 +85,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3CA5A1DA19CDE72E0007A47B /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				3C04B3A419CDBCB2005FF166 /* HTNPostTableViewController.h */,
-				3C04B3A519CDBCB2005FF166 /* HTNPostTableViewController.m */,
-				3CE6A48319CDCA2C0099944A /* HTNPostTableViewCell.h */,
-				3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */,
-				3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */,
-				3CA5A1D819CDDD7F0007A47B /* HTNTableHeaderView.xib */,
-			);
-			name = TableView;
-			sourceTree = "<group>";
-		};
 		97745D5450A54E31B642284C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,15 +116,6 @@
 			name = SignIn/SignUp;
 			sourceTree = "<group>";
 		};
-		9E76CB7919CDBA55000E2582 /* HTTPClient */ = {
-			isa = PBXGroup;
-			children = (
-				9E76CB7619CDBA51000E2582 /* htnHttpClient.h */,
-				9E76CB7719CDBA51000E2582 /* htnHttpClient.m */,
-			);
-			name = HTTPClient;
-			sourceTree = "<group>";
-		};
 		9EAA379319CCF14300931ADD = {
 			isa = PBXGroup;
 			children = (
@@ -166,12 +142,17 @@
 				9E76CB6619CD3C00000E2582 /* Models */,
 				9EAA37A319CCF14300931ADD /* AppDelegate.h */,
 				9EAA37A419CCF14300931ADD /* AppDelegate.m */,
-				3CA5A1DA19CDE72E0007A47B /* TableView */,
+				9EAA37A619CCF14300931ADD /* ViewController.h */,
+				9EAA37A719CCF14300931ADD /* ViewController.m */,
+				3C04B3A419CDBCB2005FF166 /* HTNPostTableView.h */,
+				3C04B3A519CDBCB2005FF166 /* HTNPostTableView.m */,
+				3CE6A48319CDCA2C0099944A /* HTNPostTableViewCell.h */,
+				3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */,
+				3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */,
 				9EAA37AC19CCF14300931ADD /* Images.xcassets */,
 				9EAA37AE19CCF14300931ADD /* LaunchScreen.xib */,
 				9E76CB7219CDB2C1000E2582 /* SignIn/SignUp */,
 				9EAA379F19CCF14300931ADD /* Supporting Files */,
-				9E76CB7919CDBA55000E2582 /* HTTPClient */,
 			);
 			path = "htn-ios";
 			sourceTree = "<group>";
@@ -285,7 +266,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EAA37B019CCF14300931ADD /* LaunchScreen.xib in Resources */,
-				3CA5A1D919CDDD7F0007A47B /* HTNTableHeaderView.xib in Resources */,
 				3CE6A48219CDC68A0099944A /* HTNPostTableViewCell.xib in Resources */,
 				9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */,
 			);
@@ -338,9 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C04B3A619CDBCB2005FF166 /* HTNPostTableViewController.m in Sources */,
+				3C04B3A619CDBCB2005FF166 /* HTNPostTableView.m in Sources */,
 				9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */,
-				9E76CB7819CDBA51000E2582 /* htnHttpClient.m in Sources */,
+				9EAA37A819CCF14300931ADD /* ViewController.m in Sources */,
 				9E76CB6B19CD43D9000E2582 /* htnUser.m in Sources */,
 				9EAA37A519CCF14300931ADD /* AppDelegate.m in Sources */,
 				3CE6A48519CDCA2C0099944A /* HTNPostTableViewCell.m in Sources */,
