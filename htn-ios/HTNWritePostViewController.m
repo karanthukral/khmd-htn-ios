@@ -17,19 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"woodBackground"]];
-    backgroundView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-    
     CGRect textViewRect = CGRectMake(10, 74, self.view.bounds.size.width - 20, self.view.bounds.size.height/2.0 -20);
     UITextView *textView = [[UITextView alloc] initWithFrame:textViewRect];
     textView.layer.cornerRadius = 20;
     textView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.48];
     [textView setFont:[UIFont systemFontOfSize:25]];
-    textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20);
+    textView.textContainerInset = UIEdgeInsetsMake(20, 20, 0, 0);
     
-    [self.view addSubview:backgroundView];
+    self.view.backgroundColor = [UIColor colorWithRed:0.82 green:0.84 blue:0.85 alpha:1];
     [self.view addSubview:textView];
     [textView becomeFirstResponder];
+    
     
     UIBarButtonItem *postButton = [[UIBarButtonItem alloc] initWithTitle:@"Post" style:UIBarButtonItemStylePlain target:self action:@selector(submitPost)];
     self.navigationItem.rightBarButtonItem = postButton;
