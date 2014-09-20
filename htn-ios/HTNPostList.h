@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "HTNPostTableViewController.h"
+#import "htnMapViewController.h"
 
 @interface HTNPostList : NSObject
 
-@property (nonatomic) NSMutableArray *postList;
-@property HTNPostTableViewController *tableViewController;
+@property (nonatomic, strong) NSMutableArray *postList;
+@property (nonatomic, strong) HTNPostTableViewController *tableViewController;
+@property (nonatomic, strong) htnMapViewController *mapViewController;
 
 + (HTNPostList *)sharedInstance;
 

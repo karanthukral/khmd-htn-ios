@@ -21,8 +21,12 @@
 		9E76CB7519CDB37A000E2582 /* WelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7419CDB37A000E2582 /* WelcomeView.m */; };
 		9E76CB7819CDBA51000E2582 /* htnHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7719CDBA51000E2582 /* htnHttpClient.m */; };
 		9E76CB7C19CDCB94000E2582 /* htnMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB7B19CDCB94000E2582 /* htnMapViewController.m */; };
-		9E76CB8219CDD99B000E2582 /* htmAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB8119CDD99B000E2582 /* htmAnnotation.m */; };
+		9E76CB8219CDD99B000E2582 /* htnAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB8119CDD99B000E2582 /* htnAnnotation.m */; };
 		9E76CB8419CDD9BE000E2582 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76CB8319CDD9BE000E2582 /* MapKit.framework */; };
+		9E7F923C19CE2E8400E0D35C /* pin48.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F923919CE2E8400E0D35C /* pin48.png */; };
+		9E7F923D19CE2E8400E0D35C /* pin64.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F923A19CE2E8400E0D35C /* pin64.png */; };
+		9E7F923E19CE2E8400E0D35C /* pin128.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F923B19CE2E8400E0D35C /* pin128.png */; };
+		9E7F924019CE394000E0D35C /* pin32.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7F923F19CE394000E0D35C /* pin32.png */; };
 		9EAA37A219CCF14300931ADD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A119CCF14300931ADD /* main.m */; };
 		9EAA37A519CCF14300931ADD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA37A419CCF14300931ADD /* AppDelegate.m */; };
 		9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA37AC19CCF14300931ADD /* Images.xcassets */; };
@@ -68,9 +72,13 @@
 		9E76CB7719CDBA51000E2582 /* htnHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = htnHttpClient.m; path = "HTTP Client/htnHttpClient.m"; sourceTree = "<group>"; };
 		9E76CB7A19CDCB94000E2582 /* htnMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = htnMapViewController.h; sourceTree = "<group>"; };
 		9E76CB7B19CDCB94000E2582 /* htnMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = htnMapViewController.m; sourceTree = "<group>"; };
-		9E76CB8019CDD99B000E2582 /* htmAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = htmAnnotation.h; sourceTree = "<group>"; };
-		9E76CB8119CDD99B000E2582 /* htmAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = htmAnnotation.m; sourceTree = "<group>"; };
+		9E76CB8019CDD99B000E2582 /* htnAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = htnAnnotation.h; sourceTree = "<group>"; };
+		9E76CB8119CDD99B000E2582 /* htnAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = htnAnnotation.m; sourceTree = "<group>"; };
 		9E76CB8319CDD9BE000E2582 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9E7F923919CE2E8400E0D35C /* pin48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin48.png; sourceTree = "<group>"; };
+		9E7F923A19CE2E8400E0D35C /* pin64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin64.png; sourceTree = "<group>"; };
+		9E7F923B19CE2E8400E0D35C /* pin128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin128.png; sourceTree = "<group>"; };
+		9E7F923F19CE394000E0D35C /* pin32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin32.png; sourceTree = "<group>"; };
 		9EAA379C19CCF14300931ADD /* htn-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "htn-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAA37A019CCF14300931ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EAA37A119CCF14300931ADD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -204,8 +212,8 @@
 				9E76CB7919CDBA55000E2582 /* HTTPClient */,
 				9E76CB7A19CDCB94000E2582 /* htnMapViewController.h */,
 				9E76CB7B19CDCB94000E2582 /* htnMapViewController.m */,
-				9E76CB8019CDD99B000E2582 /* htmAnnotation.h */,
-				9E76CB8119CDD99B000E2582 /* htmAnnotation.m */,
+				9E76CB8019CDD99B000E2582 /* htnAnnotation.h */,
+				9E76CB8119CDD99B000E2582 /* htnAnnotation.m */,
 			);
 			path = "htn-ios";
 			sourceTree = "<group>";
@@ -216,6 +224,10 @@
 				9E095B5019CE03BC00C5F5F2 /* pin.png */,
 				9EAA37A019CCF14300931ADD /* Info.plist */,
 				9EAA37A119CCF14300931ADD /* main.m */,
+				9E7F923F19CE394000E0D35C /* pin32.png */,
+				9E7F923919CE2E8400E0D35C /* pin48.png */,
+				9E7F923A19CE2E8400E0D35C /* pin64.png */,
+				9E7F923B19CE2E8400E0D35C /* pin128.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -321,9 +333,13 @@
 			files = (
 				9E095B5119CE03BC00C5F5F2 /* pin.png in Resources */,
 				9EAA37B019CCF14300931ADD /* LaunchScreen.xib in Resources */,
+				9E7F923D19CE2E8400E0D35C /* pin64.png in Resources */,
 				3CA5A1D919CDDD7F0007A47B /* HTNTableHeaderView.xib in Resources */,
 				3CE6A48219CDC68A0099944A /* HTNPostTableViewCell.xib in Resources */,
+				9E7F924019CE394000E0D35C /* pin32.png in Resources */,
 				9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */,
+				9E7F923C19CE2E8400E0D35C /* pin48.png in Resources */,
+				9E7F923E19CE2E8400E0D35C /* pin128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C04B3A619CDBCB2005FF166 /* HTNPostTableViewController.m in Sources */,
-				9E76CB8219CDD99B000E2582 /* htmAnnotation.m in Sources */,
+				9E76CB8219CDD99B000E2582 /* htnAnnotation.m in Sources */,
 				9E76CB7C19CDCB94000E2582 /* htnMapViewController.m in Sources */,
 				9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */,
 				9E76CB7819CDBA51000E2582 /* htnHttpClient.m in Sources */,

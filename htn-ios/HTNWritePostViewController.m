@@ -17,14 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGRect textViewRect = CGRectMake(10, 74, self.view.bounds.size.width - 20, self.view.bounds.size.height/2.0 -20);
+    CGRect textViewRect = CGRectMake(10, 74, self.view.bounds.size.width - 20, self.view.bounds.size.height/2.0 - 20);
     UITextView *textView = [[UITextView alloc] initWithFrame:textViewRect];
+    
     textView.layer.cornerRadius = 20;
+    textView.layer.masksToBounds = YES;
     textView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.48];
     [textView setFont:[UIFont systemFontOfSize:25]];
-    textView.textContainerInset = UIEdgeInsetsMake(20, 20, 0, 0);
+    textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20);
     
     self.view.backgroundColor = [UIColor colorWithRed:0.82 green:0.84 blue:0.85 alpha:1];
+    UIView *clearBackground = [[UIView alloc] initWithFrame:self.view.frame];
+    clearBackground.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:clearBackground];
     [self.view addSubview:textView];
     [textView becomeFirstResponder];
     

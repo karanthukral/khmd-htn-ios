@@ -35,6 +35,8 @@
 //    
 //    self.tableView.backgroundView = backgroundView;
     
+    self.navigationItem.title = @"Bulletin";
+    
     self.tableView.backgroundColor = [UIColor colorWithRed:0.82 green:0.84 blue:0.85 alpha:1];
     
     _posts = [HTNPostList sharedInstance].postList;
