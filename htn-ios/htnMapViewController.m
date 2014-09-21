@@ -30,7 +30,8 @@
     
     _posts = [HTNPostList sharedInstance].postList;
     self.navigationItem.title = @"Bulletin";
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.16 green:0.18 blue:0.01 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:106/255.0 green:56/255.0 blue:0 alpha:1];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:240/255.0 green:230/255.0 blue:212/255.0 alpha:1];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:0.41 green:0.22 blue:0 alpha:1]};
     
     numberZoomedOut = 0;
@@ -108,7 +109,8 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    NSLog(@"inside the stupid method");
+    HTNPostTableViewController *listViewController = [[HTNPostTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:listViewController animated:YES];
     
     //Here, the annotation tapped can be accessed using view.annotation
 }

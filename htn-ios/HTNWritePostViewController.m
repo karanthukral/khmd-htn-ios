@@ -22,14 +22,15 @@
     
     textView.layer.cornerRadius = 20;
     textView.layer.masksToBounds = YES;
-    textView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.48];
+    textView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.80];
     [textView setFont:[UIFont systemFontOfSize:25]];
     textView.textContainerInset = UIEdgeInsetsMake(20, 20, 20, 20);
     
-    self.view.backgroundColor = [UIColor colorWithRed:0.82 green:0.84 blue:0.85 alpha:1];
-    UIView *clearBackground = [[UIView alloc] initWithFrame:self.view.frame];
-    clearBackground.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:clearBackground];
+//    self.view.backgroundColor = [UIColor colorWithRed:0.82 green:0.84 blue:0.85 alpha:1];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"woodBackground"]];
+    [backgroundView setFrame:self.view.bounds];
+
+    [self.view addSubview:backgroundView];
     [self.view addSubview:textView];
     [textView becomeFirstResponder];
     
