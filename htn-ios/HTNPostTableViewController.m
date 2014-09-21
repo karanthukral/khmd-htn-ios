@@ -32,9 +32,9 @@
     
 //    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"woodBackground"]];
 //    [backgroundView setFrame:self.tableView.frame];
-//    
+//
 //    self.tableView.backgroundView = backgroundView;
-    
+
     self.navigationItem.title = @"Bulletin";
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.16 green:0.18 blue:0.01 alpha:1];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:0.41 green:0.22 blue:0 alpha:1]};
@@ -74,6 +74,8 @@
     
     tableViewCell.post = self.posts[indexPath.row];
     [tableViewCell setSelectionStyle:UITableViewCellSelectionStyleNone];
+//    [tableViewCell.layer setCornerRadius:20.0f];
+//    [tableViewCell.layer setMasksToBounds:YES];
     
     UITapGestureRecognizer *singleFingerTap =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
