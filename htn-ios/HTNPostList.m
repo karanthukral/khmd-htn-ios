@@ -45,7 +45,7 @@
 - (void)generateDummyData
 {
     htnUser *userOne = [[htnUser alloc] initWithid:@123 withName:@"hydersm"];
-    htnPost *postOne = [[htnPost alloc] initPostWithUserID:userOne withString:@"does this work?"withNumLikes:@4 withLat:[[NSDecimalNumber alloc] initWithDouble:45] withLong:[[NSDecimalNumber alloc] initWithDouble:-75] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-180]];
+    htnPost *postOne = [[htnPost alloc] initPostWithUserID:userOne withString:@"does this work? does this work? does this work? does this work? does this work? does this work?" withNumLikes:@4 withLat:[[NSDecimalNumber alloc] initWithDouble:45] withLong:[[NSDecimalNumber alloc] initWithDouble:-75] withDate:[[NSDate alloc] initWithTimeIntervalSinceNow:-180]];
     [self addPost:postOne];
     
     htnUser *userTwo = [[htnUser alloc] initWithid:@123 withName:@"duyeeee"];

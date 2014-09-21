@@ -89,7 +89,10 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 97;
+    htnPost *currentPost = _posts[indexPath.row];
+    CGRect titleLabelFontSize = [currentPost.postString boundingRectWithSize:CGSizeMake(240, CGFLOAT_MAX) options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:[NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:17.0] forKey:NSFontAttributeName] context:nil];
+
+    return titleLabelFontSize.size.height + 50;
 }
 
 - (UIView *)headerView
