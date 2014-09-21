@@ -36,7 +36,8 @@
 //    self.tableView.backgroundView = backgroundView;
     
     self.navigationItem.title = @"Bulletin";
-    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.16 green:0.18 blue:0.01 alpha:1];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:0.41 green:0.22 blue:0 alpha:1]};
     self.tableView.backgroundColor = [UIColor colorWithRed:0.82 green:0.84 blue:0.85 alpha:1];
     
     _posts = [HTNPostList sharedInstance].postList;

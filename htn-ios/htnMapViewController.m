@@ -29,10 +29,13 @@
     [super viewDidLoad];
     
     _posts = [HTNPostList sharedInstance].postList;
+    self.navigationItem.title = @"Bulletin";
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.16 green:0.18 blue:0.01 alpha:1];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:0.41 green:0.22 blue:0 alpha:1]};
     
     numberZoomedOut = 0;
-    UIBarButtonItem *zoomIn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"pin48.png"] style:UIBarButtonItemStylePlain target:self action:@selector(zoomIn)];
-    UIBarButtonItem *zoomOut = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"pin48.png"] style:UIBarButtonItemStylePlain target:self action:@selector(zoomOut)];
+    UIBarButtonItem *zoomIn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"magnify30"] style:UIBarButtonItemStylePlain target:self action:@selector(zoomIn)];
+    UIBarButtonItem *zoomOut = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Magnifying30"] style:UIBarButtonItemStylePlain target:self action:@selector(zoomOut)];
     self.navigationItem.rightBarButtonItems = @[zoomIn, zoomOut];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(goToListView)];

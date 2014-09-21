@@ -14,6 +14,8 @@
 		3CE6A48219CDC68A0099944A /* HTNPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CE6A48119CDC68A0099944A /* HTNPostTableViewCell.xib */; };
 		3CE6A48519CDCA2C0099944A /* HTNPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CE6A48419CDCA2C0099944A /* HTNPostTableViewCell.m */; };
 		9E095B5119CE03BC00C5F5F2 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E095B5019CE03BC00C5F5F2 /* pin.png */; };
+		9E10CB4F19CE5CA600AE9603 /* magnify30.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E10CB4D19CE5CA600AE9603 /* magnify30.png */; };
+		9E10CB5019CE5CA600AE9603 /* Magnifying30.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E10CB4E19CE5CA600AE9603 /* Magnifying30.png */; };
 		9E76CB6519CD3BFB000E2582 /* htnPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6419CD3BFB000E2582 /* htnPost.m */; };
 		9E76CB6819CD3EE5000E2582 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E76CB6719CD3EE5000E2582 /* CoreLocation.framework */; };
 		9E76CB6B19CD43D9000E2582 /* htnUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E76CB6A19CD43D9000E2582 /* htnUser.m */; };
@@ -59,6 +61,8 @@
 		6B1779842BB2432F9AEBA849 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		929CF79FC3AE4B03B11C10EF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E095B5019CE03BC00C5F5F2 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = Images/pin.png; sourceTree = "<group>"; };
+		9E10CB4D19CE5CA600AE9603 /* magnify30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnify30.png; sourceTree = "<group>"; };
+		9E10CB4E19CE5CA600AE9603 /* Magnifying30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Magnifying30.png; sourceTree = "<group>"; };
 		9E76CB6319CD3BFB000E2582 /* htnPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = htnPost.h; path = Models/htnPost.h; sourceTree = "<group>"; };
 		9E76CB6419CD3BFB000E2582 /* htnPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = htnPost.m; path = Models/htnPost.m; sourceTree = "<group>"; };
 		9E76CB6719CD3EE5000E2582 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -221,6 +225,8 @@
 		9EAA379F19CCF14300931ADD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9E10CB4D19CE5CA600AE9603 /* magnify30.png */,
+				9E10CB4E19CE5CA600AE9603 /* Magnifying30.png */,
 				9E095B5019CE03BC00C5F5F2 /* pin.png */,
 				9EAA37A019CCF14300931ADD /* Info.plist */,
 				9EAA37A119CCF14300931ADD /* main.m */,
@@ -339,6 +345,8 @@
 				9E7F924019CE394000E0D35C /* pin32.png in Resources */,
 				9EAA37AD19CCF14300931ADD /* Images.xcassets in Resources */,
 				9E7F923C19CE2E8400E0D35C /* pin48.png in Resources */,
+				9E10CB4F19CE5CA600AE9603 /* magnify30.png in Resources */,
+				9E10CB5019CE5CA600AE9603 /* Magnifying30.png in Resources */,
 				9E7F923E19CE2E8400E0D35C /* pin128.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
